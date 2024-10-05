@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table with css selector</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            text-align: left;
+            padding: 5px;
+        }
+        tr:nth-child(even){
+            background-color: #7bccb0;
+        }
+        th{
+            background-color: #4caf50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<h2>Clients information </h2>
+<table>
+    <tr></tr>
+    <tr>
+        <th>Last Name</th>
+        <th>First Name</th>
+        <th>Budget ($)</th>
+    </tr>
+    <tr>
+        <td>Nguyen Truong</td>
+        <td>Phuoc</td>
+        <td>30000</td></tr>
+    <tr>
+        <td>Nguyen Thi</td>
+        <td>Phuong</td>
+        <td>20000</td>
+    </tr>
+    <tr>
+        <td>Tran Thanh</td>
+        <td>Trung</td>
+        <td>10000</td>
+    </tr>
+</table>
+</body>
+</html>
