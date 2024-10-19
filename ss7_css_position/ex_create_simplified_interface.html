@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simplified interface</title>
+
+    <style>
+        body{
+            font-family: Arial,sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color:#fff;
+            padding: 10px 0;
+            text-align: center;
+            /*z-index:1000;*/
+        }
+        .container{
+            display: flex;
+            margin-top: 60px;
+        }
+        .sidebar {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            width: 250px;
+            background-color: #444;
+            color: #FFF;
+            padding: 20px  ;
+            height: calc(100vh - 60px);
+            box-sizing: border-box;
+        }
+        li{
+            display: inline-flex;
+            padding: 12px;
+        }
+        .main-container{
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>Home Page</h1>
+</div>
+<div class="container">
+    <div class="sidebar">
+        <h2>Sidebar</h2>
+        <ul>
+            <li><a href="#" style="color: #7bccb0; text-decoration: none;">Link 1</a></li>
+            <li><a href="#" style="color: #7bccb0; text-decoration: none;">Link 2</a></li>
+            <li><a href="#" style="color: #7bccb0; text-decoration: none;">Link 3</a></li>
+            <li><a href="#" style="color: #7bccb0; text-decoration: none;">Link 4</a></li>
+        </ul>
+    </div>
+    <div class="main-container">
+        <h2>Main Content</h2>
+        <p>This is main content of web. You can add posts, images or others elements in here</p>
+    </div>
+</div>
+</body>
+</html>

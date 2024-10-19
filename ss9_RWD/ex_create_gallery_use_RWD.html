@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Gallery Picture</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1,h3 {
+            text-align: center;
+        }
+        .container, .item-content p {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .picture-item{
+            border: black solid 1px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            margin: 20px;
+            box-sizing: border-box;
+        }
+        .picture-item img {
+            width: 100%;
+            height: auto;
+        }
+        @media (max-width: 900px) {
+            .picture-item {
+                flex: 1 1 33.33% ;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .picture-item {
+                flex: 1 1 50%;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .picture-item {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>Responsive Image Gallery</h1>
+<h3>Resize the browser window to see the effect.</h3>
+<div class="container">
+    <div class="picture-item">
+        <img src="https://demo.codegym.vn/web/15/gallery/img_fjords.jpg" alt="picture natural 1">
+        <div class="item-content">
+            <p>Add a description of the image here</p>
+        </div>
+    </div>
+    <div class="picture-item">
+        <img src="https://demo.codegym.vn/web/15/gallery/img_forest.jpg" alt="picture natural 2">
+        <div class="item-content">
+            <p>Add a description of the image here</p>
+        </div>
+    </div>
+    <div class="picture-item">
+        <img src="https://demo.codegym.vn/web/15/gallery/img_lights.jpg" alt="picture natural 3">
+        <div class="item-content">
+            <p>Add a description of the image here</p>
+        </div>
+    </div>
+    <div class="picture-item">
+        <img src="https://demo.codegym.vn/web/15/gallery/img_mountains.jpg" alt="picture natural 4">
+        <div class="item-content">
+            <p>Add a description of the image here</p>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <p>This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px
+        wide, it will show four images side by side, for screens smaller than 700px, it will show two images side by
+        side. For screens smaller than 500px, the images will stack vertically (100%).</p>
+</div>
+</body>
+</html>
