@@ -1,0 +1,206 @@
+// Biến màu sắc
+$primary-color: #4CAF50;
+$secondary-color: #f1f1f1;
+$text-color: #333;
+$link-color: #2196F3;
+
+// Cài đặt cơ bản cho body
+body {
+  font-family: "Times New Roman", Georgia, Serif;
+  margin: 0;
+  padding: 0;
+}
+
+// Navbar
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    letter-spacing: 4px;
+
+    .navbar-item {
+      text-decoration: none;
+      color: $text-color;
+      padding: 10px;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: $secondary-color;
+      }
+    }
+
+    .navbar-links {
+      display: flex;
+
+      .navbar-item {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+// Header
+.header-container {
+  position: relative;
+  max-width: 1600px;
+  min-width: 500px;
+
+  .header-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .header-text {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+
+    .header-title {
+      font-size: 48px;
+      margin: 0;
+    }
+  }
+}
+
+// Nội dung chính
+.content-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+
+  // About Section
+  .about-section {
+    display: flex;
+    align-items: center;
+    padding: 64px 0;
+
+    .about-image {
+      flex: 1;
+      padding-right: 20px;
+      img {
+        border-radius: 8px;
+        width: 100%;
+        opacity: 0.9;
+      }
+    }
+
+    .about-text {
+      flex: 1;
+
+      .about-title {
+        text-align: center;
+        font-size: 32px;
+      }
+
+      .about-subtitle {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+
+      .about-description {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  // Menu Section
+  .menu-section {
+    display: flex;
+    padding: 64px 0;
+
+    .menu-text {
+      flex: 1;
+      padding-right: 20px;
+
+      .menu-title {
+        text-align: center;
+        font-size: 32px;
+      }
+
+      h4 {
+        margin: 10px 0;
+      }
+
+      .menu-description {
+        color: $text-color;
+        margin-bottom: 20px;
+      }
+    }
+
+    .menu-image {
+      flex: 1;
+
+      img {
+        border-radius: 8px;
+        width: 100%;
+      }
+    }
+  }
+
+  // Contact Section
+  .contact-section {
+    padding: 64px 0;
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+
+      &:focus {
+        border-color: $primary-color;
+        outline: none;
+      }
+    }
+
+    .form-button {
+      background-color: $primary-color;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+}
+
+// Footer
+.footer {
+  text-align: center;
+  background-color: $secondary-color;
+  padding: 32px;
+
+  a {
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
