@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .picture-item {
+            border: 1px solid black;
+            margin: 5px;
+            padding: 0;
+            text-align: center;
+        }
+
+        .picture-item img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container ">
+    <div class="col-lg-3 col-md-6 col-12 picture-item d-flex flex-column">
+        <img src="https://demo.codegym.vn/web/15/gallery/img_fjords.jpg" alt="picture natural 1">
+        <div class="item-content">
+            <p>Add a description of the image here</p>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-12 picture-item d-flex flex-column">
+        <img src="https://demo.codegym.vn/web/15/gallery/img_forest.jpg" alt="picture natural 2">
+        <div class="item-content">
+            <p>Add a description of the image here</p>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-12 picture-item d-flex flex-column">
+        <img src="https://demo.codegym.vn/web/15/gallery/img_lights.jpg" alt="picture natural 3">
+        <div class="item-content">
+            <p>Add a description of the image here</p>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-12 picture-item d-flex flex-column">
+        <img src="https://demo.codegym.vn/web/15/gallery/img_mountains.jpg" alt="picture natural 4">
+        <div class="item-content">
+            <p>Add a description of the image here</p>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
