@@ -1,4 +1,3 @@
-
 $primary-color: #4CAF50;
 $secondary-color: #f1f1f1;
 $text-color: #333;
@@ -49,12 +48,52 @@ body {
       }
     }
   }
+
+  // Dropdown styling
+  .dropdown {
+    position: relative;
+
+    .dropdown-toggle {
+      color: $text-color;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .dropdown-menu {
+      display: none;
+      letter-spacing: 0;
+      position: absolute;
+      width: 150px;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      padding: 8px 0;
+      border-radius: 4px;
+      z-index: 10;
+
+      .dropdown-item {
+        padding: 8px 20px;
+        display: block;
+        color: $text-color;
+        text-decoration: none;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: $secondary-color;
+        }
+      }
+    }
+
+   &:hover .dropdown-menu {
+      display: block;
+    }
+  }
 }
 
 // Header
 .header-container {
   position: relative;
-  //max-width: 1600px;
   min-width: 500px;
 
   .header-image {
@@ -62,135 +101,61 @@ body {
     height: auto;
   }
 
-  .header-text {
+  .header-title {
     position: absolute;
     bottom: 30px;
     left: 30px;
     color: white;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-
-    .header-title {
-      font-size: 48px;
-      margin: 0;
-    }
+    font-size: 48px;
   }
 }
 
-
+// Content container and sections
 .content-container {
   max-width: 1100px;
   margin: auto;
   padding: 20px;
 
-
-  .about-section {
-    display: flex;
-    align-items: center;
-    padding: 64px 0;
-
-    .about-image {
-      flex: 1;
-      padding-right: 20px;
-      img {
-        border-radius: 8px;
-        width: 100%;
-        opacity: 0.9;
-      }
-    }
-
-    .about-text {
-      flex: 1;
-
-      .about-title {
-        text-align: center;
-        font-size: 32px;
-      }
-
-      .about-subtitle {
-        text-align: center;
-        font-size: 20px;
-        margin-bottom: 20px;
-      }
-
-      .about-description {
-        font-size: 16px;
-        line-height: 1.6;
-      }
-    }
-  }
-
-
-  .menu-section {
-    display: flex;
-    padding: 64px 0;
-
-    .menu-text {
-      flex: 1;
-      padding-right: 20px;
-
-      .menu-title {
-        text-align: center;
-        font-size: 32px;
-      }
-
-      h4 {
-        margin: 10px 0;
-      }
-
-      .menu-description {
-        color: $text-color;
-        margin-bottom: 20px;
-      }
-    }
-
-    .menu-image {
-      flex: 1;
-
-      img {
-        border-radius: 8px;
-        width: 100%;
-      }
-    }
-  }
-
-  // Contact Section
+  .about-section,
+  .menu-section,
   .contact-section {
     padding: 64px 0;
 
-    h1 {
-      margin-bottom: 20px;
+    h2 {
+      text-align: center;
+      font-size: 32px;
+    }
+    .about-subtitle{
+      text-align: center;
+      font-size: 20px;
     }
 
-    p {
+    .menu-description, p {
       font-size: 16px;
+      padding-left: 50px;
       line-height: 1.6;
     }
 
-    .form-input {
+    .about-image img {
+      border-radius: 8px;
       width: 100%;
-      padding: 12px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-
-      &:focus {
-        border-color: $primary-color;
-        outline: none;
-      }
     }
+  }
 
-    .form-button {
-      background-color: $primary-color;
-      color: white;
-      padding: 12px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
+  .about-section, .menu-section {
+    display: flex;
 
-      &:hover {
-        background-color: darken($primary-color, 10%);
-      }
+    .about-text, .menu-text {
+      flex: 1 ;
     }
+  }
+  .form-input{
+    width: 100%;
+    height:40px;
+  }
+  .form-button{
+    width: 150px;
   }
 }
 
@@ -209,3 +174,77 @@ body {
     }
   }
 }
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: $text-color;
+  padding: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+
+    .navbar-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+
+      .navbar-item {
+        margin: 5px 0;
+        font-size: 18px;
+      }
+    }
+
+    .dropdown-menu {
+      position: relative;
+      width: 100%;
+      box-shadow: none;
+
+      .dropdown-item {
+        padding: 10px;
+      }
+    }
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .header-container {
+    .header-title {
+      font-size: 32px;
+      bottom: 20px;
+      left: 20px;
+    }
+  }
+
+  .content-container {
+    padding: 10px;
+
+    .about-section,
+    .menu-section,
+    .contact-section {
+      padding: 32px 0;
+
+      h2 {
+        font-size: 28px;
+      }
+
+      .about-section {
+        flex-direction: column;
+        text-align: center;
+
+        .about-text, .menu-text {
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+}
+
